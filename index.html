@@ -1,68 +1,89 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js" integrity="sha512-vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <style>
-      body{padding:15px;}
+      body {
+        padding: 15px;
+      }
+
     </style>
-    
+
     <script>
-			var doc=new jsPDF();
-      
-      $('#getPdf').click(() => {
-      	doc.fromHTML($('body').html(),15,15,{width:700;});
-        doc.save('Jordan resume.pdf');
-      })
+      var doc = new jsPDF();
+			
+			function getPDF(){
+				var content=$('#content').html();
+				var options = {
+      		margin:       0.2,
+      		filename:     'resume.pdf',
+      		image:        { type: 'jpeg', quality: 0.98 },
+      		html2canvas:  { scale: 2 },
+      		jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
+    		};
+				html2pdf(content, options);
+			}
     </script>
   </head>
-  
+
   <body>
-    <h4>Jordan Soans</h4>
-    <b>B.E. Electronics and Computer Science, Fr. Conceicao Rodrigues College of Engineering, Bandra</b><br>
-    <b>Email: </b>jordansoans2002@gmail.com | <b>Mobile No: </b>9769376267 | <b>GitHub: </b><a href="github.com/jordansoans2002">github.com/jordansoans2002</a><br>
-    <b>Objective</b><br>
-    To work with other people to develop creative solutions to real life issues, use my God-given brains, improve by learning new skills and impact people’s lives with my work.<br>
-    <b>Education</b>
-    <table class="table-bordered">
-      <tr>
-        <th>Qualification</th>
-        <th>Institute</th>
-        <th>Board</th>
-        <th>Year of passing</th>
-        <th>% / CGPA</th>
-      </tr>
-      <tr>
-        <td>BE Electronics and Computer Science</td>
-        <td>Fr. Conceicao Rodrigues College of Engineering</td>
-        <td>Mumbai University</td>
-        <td>Pursuing</td>
-        <td>9.09</td>
-      </tr>
-      <tr>
-        <td>12th standard</td>
-        <td>Smt. Sulochanadevi Singhania School</td>
-        <td>ISC</td>
-        <td>2020</td>
-        <td>95.60%</td>
-      </tr>
-      <tr>
-        <td>10th standard</td>
-        <td>Smt. Sulochanadevi Singhania School</td>
-        <td>ICSE</td>
-        <td>2018</td>
-        <td>96.20%</td>
-      </tr>
-    </table>
-    
-    <b>Projects</b>
+    <div id="content">
+      <h4>Jordan Soans</h4>
+      <b>B.E. Electronics and Computer Science, Fr. Conceicao Rodrigues College of Engineering,
+
+        Bandra</b><br>
+      <b>Email: </b>jordansoans2002@gmail.com | <b>Mobile No: </b>9769376267 | <b>GitHub: </b><a href="github.com/jordansoans2002">github.com/jordansoans2002</a><br>
+      <b>Objective</b><br>
+      To work with other people to develop creative solutions to real life issues, use my God-given
+
+      brains, improve by learning new skills and impact people’s lives with my work.<br>
+      <b>Education</b>
+      <table class="table-bordered">
+        <tr>
+          <th>Qualification</th>
+          <th>Institute</th>
+          <th>Board</th>
+          <th>Year of passing</th>
+          <th>% / CGPA</th>
+        </tr>
+        <tr>
+          <td>BE Electronics and Computer Science</td>
+          <td>Fr. Conceicao Rodrigues College of Engineering</td>
+          <td>Mumbai University</td>
+          <td>Pursuing</td>
+          <td>9.09</td>
+        </tr>
+        <tr>
+          <td>12th standard</td>
+          <td>Smt. Sulochanadevi Singhania School</td>
+          <td>ISC</td>
+          <td>2020</td>
+          <td>95.60%</td>
+        </tr>
+        <tr>
+          <td>10th standard</td>
+          <td>Smt. Sulochanadevi Singhania School</td>
+          <td>ICSE</td>
+          <td>2018</td>
+          <td>96.20%</td>
+        </tr>
+      </table>
+
+      <b>Projects</b>
       <ul style="list-style-type:square;">
         <li>
-          Printout Vending Machine (Sept 2022) - application to allow users to upload documents to the cloud and print a document at any of the vending machines <br>
-          <a href="https://github.com/jordansoans2002/Printout_Vending_Machine">https://github.com/jordansoans2002/Printout_Vending_Machine</a>
+          Printout Vending Machine (Sept 2022) - application to allow users to upload documents to
+
+          the cloud and print a document at any of the vending machines <br>
+          <a href="https://github.com/jordansoans2002/Printout_Vending_Machine">https://github.com/jordansoans2
+
+            002/Printout_Vending_Machine</a>
           <ul style="list-style-type:disk;">
             <li>Learnt how to create and manage a database on the cloud using AWS services</li>
             <li>Access files and data stored in the cloud from Java using APIs</li>
@@ -70,8 +91,12 @@
           </ul>
         </li>
         <li>
-          Educational Games App (April 2022) - developed a software version of games we used to play with friends and family into fun games to teach english and math <br>
-          <a href="https://github.com/jordansoans2002/Games_Arcade">https://github.com/jordansoans2002/Games_Arcade</a>
+          Educational Games App (April 2022) - developed a software version of games we used to
+
+          play with friends and family into fun games to teach english and math <br>
+          <a href="https://github.com/jordansoans2002/Games_Arcade">https://github.com/jordansoans2002/Games_Ar
+
+            cade</a>
           <ul style="list-style-type:disk;">
             <li>Learnt how to create computer applications using JavaFx</li>
             <li>Made use of socket programming and multi-threading to allow multiplayer games</li>
@@ -79,29 +104,34 @@
           </ul>
         </li>
         <li>
-         Class Scheduling app (January 2022) - developed a program to open the links to each of my mother’s online classes <br>
-          <a href="https://github.com/jordansoans2002/Games_Arcade">https://github.com/jordansoans2002/Games_Arcade</a>
+          Class Scheduling app (January 2022) - developed a program to open the links to each of my
+
+          mother’s online classes <br>
+          <a href="https://github.com/jordansoans2002/Games_Arcade">https://github.com/jordansoans2002/Games_Ar
+
+            cade</a>
           <ul style="list-style-type:disk;">
             <li>Used a ScheduledExecuterService to open the links at the designated times</li>
             <li>Learnt how to identify and solve problems</li>
           </ul>
         </li>
       </ul>
-      
+
       <b>Work Experience</b><br>
       <ul style="list-style-type:square;">
         <li>
           Speedway (June 2022) - worked as a mechanic at a garage.<br>
-          <a href="https://github.com/jordansoans2002/Printout_Vending_Machine">https://github.com/jordansoans2002/Printout_Vending_Machine</a>
           <ul style="list-style-type:disk;">
             <li>Experienced learning on the job</li>
             <li>Learnt humility</li>
             <li>Learnt basic car electronics and PCB testing</li>
-            <li>Learnt basic car maintenance, how to change tires, brake pad and oil and air filter</li>
+            <li>Learnt basic car maintenance, how to change tires, brake pad and oil and air
+
+              filter</li>
           </ul>
         </li>
       </ul>
-      
+
       <div class="row">
         <div class="col-6">
           <b>Technical Skills</b><br>
@@ -111,9 +141,9 @@
             <li>AWS - Amazon aurora and EC2</li>
           </ul>
         </div>
-        
+
         <div class="col-6">
-        <b>Strengths</b><br>
+          <b>Strengths</b><br>
           <ul>
             <li>Learn new technologies easily</li>
             <li>Write neat and efficient code</li>
@@ -121,6 +151,9 @@
           </ul>
         </div>
       </div>
-      <button id="getPdf" class="btn btn-primary">Click here to download</button>
+      <div id="elementH"></div>
+    </div>
+    <button id="getPdf" class="btn btn-primary" onClick="getPDF()">Click here to download</button>
   </body>
+
 </html>

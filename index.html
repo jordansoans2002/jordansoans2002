@@ -16,33 +16,28 @@
     </style>
 
     <script>
-      var doc = new jsPDF();
-			
-			function getPDF(){
-				var content=$('#content').html();
-				var options = {
-      		margin:       0.2,
-      		filename:     'resume.pdf',
-      		image:        { type: 'jpeg', quality: 0.98 },
-      		html2canvas:  { scale: 2 },
-      		jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
-    		};
-				html2pdf(content, options);
-			}
+      var doc = new jsPDF();			
+      function getPDF(){
+	var content=$('#content').html();
+	var options = {
+	  margin:       0.2,
+      	  filename:     'resume.pdf',
+      	  image:        { type: 'jpeg', quality: 0.98 },
+      	  html2canvas:  { scale: 2 },
+      	  jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
+    	};
+	html2pdf(content, options);
+      }
     </script>
   </head>
 
   <body>
     <div id="content">
       <h4>Jordan Soans</h4>
-      <b>B.E. Electronics and Computer Science, Fr. Conceicao Rodrigues College of Engineering,
-
-        Bandra</b><br>
+      <b>B.E. Electronics and Computer Science, Fr. Conceicao Rodrigues College of Engineering,Bandra</b><br>
       <b>Email:</b>jordansoans2002@gmail.com | <b>Mobile No:</b>9769376267 | <b>GitHub:</b><a href="github.com/jordansoans2002">github.com/jordansoans2002</a><br>
       <b>Objective</b><br>
-      To work with other people to develop creative solutions to real life issues, use my God-given
-
-      brains, improve by learning new skills and impact people’s lives with my work.<br>
+      To work with other people to develop creative solutions to real life issues, use my God-given brains, improve by learning new skills and impact people’s lives with my work.<br>
       <b>Education</b>
       <table class="table-bordered">
         <tr>
@@ -78,13 +73,11 @@
       <b>Projects</b>
       <ul style="list-style-type:none;">
         <li>
-          &#9654;&nbsp;Printout Vending Machine (Sept 2022) - application to allow users to upload documents to
-
-          the cloud and print a document at any of the vending machines <br>
+          &#9654;&nbsp;Printout Vending Machine (Sept 2022) - application to allow users to upload documents to the cloud and print a document at any of the vending machines <br>
           <a href="https://github.com/jordansoans2002/Printout_Vending_Machine">https://github.com/jordansoans2002/Printout_Vending_Machine</a>
           <ul style="list-style-type:none;">
             <li>&#9675;&nbsp; Learnt how to create and manage a database on the cloud using AWS services</li>
-						<li>&#9675;&nbsp; Access files and data stored in the cloud from Java using APIs</li>
+	    <li>&#9675;&nbsp; Access files and data stored in the cloud from Java using APIs</li>
             <li>&#9675;&nbsp;Made use of the Printer API in Java and Apache POI</li>
           </ul>
         </li>
@@ -93,16 +86,15 @@
           <a href="https://github.com/jordansoans2002/Games_Arcade">https://github.com/jordansoans2002/Games_Arcade</a>
           <ul style="list-style-type:none;">
             <li>&#9675;&nbsp;Learnt how to create computer applications using JavaFx</li>
-						<li>&#9675;&nbsp;Made use of socket programming and multi-threading to allow multiplayer games</li>
+	    <li>&#9675;&nbsp;Made use of socket programming and multi-threading to allow multiplayer games</li>
             <li>&#9675;&nbsp;Gained insights into how software applications are developed</li>
           </ul>
         </li>
         <li>
           &#9654;&nbsp;Class Scheduling app (January 2022) - developed a program to open the links to each of my mother’s online classes <br>
-          <a href="https://github.com/jordansoans2002/Games_Arcade">https://github.com/jordansoans2002/Games_Arcade</a>
           <ul style="list-style-type:none;">
-					<li>&#9675;&nbsp;Used a ScheduledExecuterService to open the links at the designated times</li>
-						<li>&#9675;&nbsp;Learnt how to identify and solve problems</li>
+	    <li>&#9675;&nbsp;Used a ScheduledExecuterService to open the links at the designated times</li>
+	    <li>&#9675;&nbsp;Learnt how to identify and solve problems</li>
           </ul>
         </li>
       </ul>
@@ -112,33 +104,34 @@
         <li>
           &#9654;&nbsp;Speedway (June 2022) - worked as a mechanic at a garage.<br>
           <ul style="list-style-type:none;">
-					<li>&#9675;&nbsp;Experienced learning on the job</li>
-						<li>&#9675;&nbsp;Learnt humility</li>
-						<li>&#9675;&nbsp;Learnt basic car electronics and PCB testing</li>
-						<li>&#9675;&nbsp;Learnt basic car maintenance, how to change tires, brake pad and oil and air filter</li>
+	    <li>&#9675;&nbsp;Experienced learning on the job</li>
+	    <li>&#9675;&nbsp;Learnt humility</li>
+            <li>&#9675;&nbsp;Learnt basic car electronics and PCB testing</li>
+	    <li>&#9675;&nbsp;Learnt basic car maintenance, how to change tires, brake pad and oil and air filter</li>
           </ul>
         </li>
       </ul>
-
+	    
       <div class="row">
         <div class="col-6">
           <b>Technical Skills</b><br>
-          <ul>
-            <li>Java and JavaFX</li>
-            <li>PostgreSQL</li>
-            <li>AWS - Amazon aurora and EC2</li>
+          <ul style="list-style-type:none;">
+            <li>&#9679;&nbsp;Java and JavaFX</li>
+            <li>&#9679;&nbsp;PostgreSQL</li>
+            <li>&#9679;&nbsp;AWS - Amazon aurora and EC2</li>
           </ul>
         </div>
 
         <div class="col-6">
           <b>Strengths</b><br>
-          <ul>
-            <li>Learn new technologies easily</li>
-            <li>Write neat and efficient code</li>
-            <li>Enjoy planning and developing software</li>
+          <ul style="list-style-type:none;">
+            <li>&#9679;&nbsp;Learn new technologies easily</li>
+            <li>&#9679;&nbsp;Write neat and efficient code</li>
+            <li>&#9679;&nbsp;Enjoy planning and developing software</li>
           </ul>
         </div>
       </div>
+      
       <div id="elementH"></div>
     </div>
     <button id="getPdf" class="btn btn-primary" onClick="getPDF()">Click here to download</button>

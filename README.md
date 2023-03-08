@@ -1,8 +1,7 @@
 - 👋 Hi, I’m @jordansoans2002
-- 👀 I’m interested in learning languages and industry applicable skills
-- 🌱 I’m currently learning javascript, html and css
-      I have a passion for app development in java
-- 💞️ I’m looking to collaborate on any projects that require basic knowledge of java, c++, html, css, javascript
+- 👀 Enjoy using programming to solve real world problems with out of the box creative solutions
+- 🌱 Android and desktop app development, web development and embedded programming
+- 💞️ Enjoy working with creative people to have fun and help others enjoy life
 
 <!---
 jordansoans2002/jordansoans2002 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
